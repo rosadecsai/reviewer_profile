@@ -1,0 +1,10 @@
+Q1.1;When I receive an invitation to review a manuscript [I accept it immediately];I1;B;2;Yes;No
+Q1.2;When I receive an invitation to review a manuscript [I read the abstract and accept the invitation if it is of interest to me];J1;B;2;Yes;No
+Q1.3;When I receive an invitation to review a manuscript [I accept it if I have enough time ];K1;B;2;Yes;No
+Q1.4;When I receive an invitation to review a manuscript [I accept the invitation to review when the journal is of a high impact ];L1;B;2;Yes;No
+Q1.5;When I receive an invitation to review a manuscript [I accept  it if  I have published  a manuscript in the  journal ];M1;B;2;Yes;No
+Q1.6;When I receive an invitation to review a manuscript [I accept it if they are leading authors in my field of work];N1;B;2;Yes;No
+Q2.1;When I accept review invitations without immediate deadlines, I always send my report on time (0:completely disagree 10: completely agree);O1;D;10;
+Q3.1;When I accept the invitation to review a manuscript with a close deadline, I always send my report on time  (0:completely disagree 10: completely agree);P1;D;10
+Q4.1;In a competitive deadline scenario, I prefer to:;Q2;T;3;Write a review report for a high difficulty manuscript;Write a report to secure a peer-reviewed grant;Both of the above two options
+Q5.1;When invited to review a high-difficult manuscript, I am more likely to accept higher evaluation goals (e.g., quality control, in addition to helping the profession and keeping up-to-date)  if the reviewer's compensation is:;X1;T;6;$0;$10;$50;$100;$150;$200

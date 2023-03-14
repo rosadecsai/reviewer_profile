@@ -1,0 +1,4 @@
+Q8.1;The quality of my reviewer report is very high (0: lcompletely disagree 10: completely agree);AB1;D;10
+Q9.1;In terms of the evaluation of the novelty, the quality of my reviewer report is very high  (0: completely disagree 10: completely agree);AC1;D;10
+Q10.1;In terms of the evaluation of the results, the quality of my reviewer report is very high (0:completely disagree 10:completely agree);AD1;D;10
+Q11.1;In terms of the article's readability, the quality of  my reviewer report is very high (0: completely disagree 10: completely agree);AE1;D;10

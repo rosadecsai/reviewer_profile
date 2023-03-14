@@ -1,0 +1,6 @@
+Q6.1;When receiving an invitation to review a high-difficult manuscript, my goal intentions for the evaluation of the manuscript are: [Quality control];R1;B;2;Yes;No
+Q6.2;When receiving an invitation to review a high-difficult manuscript, my goal intentions for the evaluation of the manuscript are: [Helping the profession];S1;B;2;Yes;No
+Q6.3;When receiving an invitation to review a high-difficult manuscript, my goal intentions for the evaluation of the manuscript are: [Staying up-to-date];T1;B;2;Yes;No
+Q6.4;When receiving an invitation to review a high-difficult manuscript, my goal intentions for the evaluation of the manuscript are: [Networking opportunities];U1;B;2;Yes;No
+Q6.5;When receiving an invitation to review a high-difficult manuscript, my goal intentions for the evaluation of the manuscript are: [Just enjoying it];V1;B;2;Yes;No
+Q6.6;When receiving an invitation to review a high-difficult manuscript, my goal intentions for the evaluation of the manuscript are: [I have no goal intention];W1;B;2;Yes;No
