@@ -110,19 +110,34 @@ if __name__ == '__main__':
     file_codes_goal = "data/data_input/columnas_survey_answer_goal.txt"
     file_codes_effort = "data/data_input/columnas_survey_answer_esfuerzo.txt"
     file_codes_quality = "data/data_input/columnas_survey_answer_quality.txt"
+    file_codes_satis = "data/data_input/columnas_survey_answer_satisfaction.txt"
    
     df_sesgo=getSesgo(file_survey, file_codes)
     df_effort=getEffort(file_survey, file_codes_effort)
     df_goal=getGoal(file_survey, file_codes_goal)
     df_quality=getQuality(file_survey, file_codes_quality)
+    df_satisfaction=getSatisfaction(file_survey, file_codes_satis)
     
     #save calculated data
     df_result =pd.DataFrame()
-    df_result.at[:,'goal']=df_goal['goal']
-    df_result.at[:,'sesgo']=df_sesgo['sesgo']
-    df_result.at[:,'effort']=df_effort['effort']
-    df_result.at[:,"quality"]=df_quality["quality"]
-    df_result.to_excel("data/DataResult.xlsx")
+    #df_result.at[:,'goal']=df_goal['goal']
+    #df_result.at[:,'sesgo']=df_sesgo['sesgo']
+    #df_result.at[:,'effort']=df_effort['effort']
+    #df_result.at[:,"quality"]=df_quality["quality"]
+    #df_result.to_excel("data/DataResult.xlsx")
+    df_result = pd.concat([df_goal[["Q6.1","Q6.2","Q6.3","Q6.4","Q6.5","Q6.6"]],
+                           df_sesgo[["Q4.1_0","Q4.1_1","Q4.1_2","Q5.1_0","Q5.1_1",
+                                    "Q5.1_2","Q5.1_3","Q5.1_4","Q5.1_5","money","nomoney"]],
+                           df_effort,df_quality,df_satisfaction], axis=1)
+    new_columns={"Q6.1":"Q1.1","Q6.2":"Q1.2","Q6.3":"Q1.3","Q6.4":"Q1.4","Q6.5":"Q1.5",
+                 "Q6.6":"Q1.6","Q4.1_0":"Q2.1","Q4.1_1":"Q2.2","Q4.1_2":"Q2.3",
+                 "Q5.1_0":"Q3.1","Q5.1_1":"Q3.2","Q5.1_2":"Q3.3","Q5.1_3":"Q3.4","Q5.1_4":"Q3.5",
+                 "Q5.1_5":"Q3.6",
+                 "Q7.1":"Q4.1","Q8.1":"Q5.1","Q9.1":"Q6.1","Q10.1":"Q7.1","Q11.1":"Q8.1"}
+    df_result=df_result.rename(columns=new_columns)
+    df_result.to_csv("data/DataResult.csv",sep=";")
+
+
     #uncomment the following sections depending on what you want to get
     #Remember Q6 in the paper is Q1 and Q4 in the paper is Q2
 
@@ -130,7 +145,7 @@ if __name__ == '__main__':
     # print("########################################")
     # print("ONE WAY ANOVA test for Q6 question")
     # print("########################################")
-    #getANOVA(df_goal[["Q6.1","Q6.2","Q6.3","Q6.4","Q6.5"]])
+    getANOVA(df_goal[["Q6.1","Q6.2","Q6.3","Q6.4","Q6.5"]])
     # input()
     
     
@@ -176,16 +191,12 @@ if __name__ == '__main__':
     #getMANOVA(df_test,"money",["Q61","Q412"],True)
     
     
-   
-
-
-
 
     
     #####################################################################
     ###########################################
-    print("########################################")
-    print("Creating plot of gain utility vs initial goal")
-    print("########################################")
-    plot_gain_utility(df_result,eta=2.13,mu=1.2,betas={0.1,0.15,0.25,0.3},cs={0.1,0.15,0.2,0.25})
+    #print("########################################")
+    #print("Creating plot of gain utility vs initial goal")
+    #print("########################################")
+    #plot_gain_utility(df_result,eta=2.13,mu=1.2,betas={0.1,0.15,0.25,0.3},cs={0.1,0.15,0.2,0.25})
    

@@ -105,7 +105,7 @@ def getGoal(file_survey, file_codes):
     df.loc[df["Q6.6"] == 1, "Q6.4"] = 0
     df.loc[df["Q6.6"] == 1, "Q6.5"] = 0
     #Correlation between variables 
-    df_aux = df[["Q6.1","Q6.2","Q6.3","Q6.4","Q6.5"]]  
+    df_aux = df[["Q6.1","Q6.2","Q6.3","Q6.4","Q6.5","Q6.6"]]  
     #combinations of goal
     df.at[:,"Q6.1_and_Q6.2"]=(df_aux.loc[:,"Q6.1"]==1) & (df_aux.loc[:,"Q6.2"]==1) 
     df["Q6.1_and_Q6.2"]=df["Q6.1_and_Q6.2"].astype(int)
@@ -192,4 +192,23 @@ def getQuality(file_survey, file_codes):
     fres=0.5/3
     df.loc[:,'quality']=df['Q8.1']/10*f1+(df["Q9.1"]/10+df["Q10.1"]/10+df["Q11.1"]/10)*fres
     df.to_excel("data/quality.xlsx", sheet_name = "quality")    
+    return df 
+####################################################
+
+def getSatisfaction(file_survey, file_codes):
+    """
+    Get data associated with the quality answers. Calculate the total quality (see "quality" column)
+    Arguments:
+        *file_survey: name of the file with the survey
+        *file_codes: name of the file with the columns to read
+    Return:
+        A dataframe with quality information
+        write in data directory the excel file quality.xlsx
+    Example:
+        df_satisfaction=getSesgo("results-survey354291.xlsx","columnas_survey_answer_satisfaction.txt")
+    """   
+    
+    df = readData(file_survey,file_codes);
+    #Q9.1 and Q10.1
+    
     return df 
