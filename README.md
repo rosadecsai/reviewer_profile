@@ -1,6 +1,6 @@
 # The reviewer's profile in peer-review of a manuscript by goal, effort and performance
 We have empirically studied the reviewer’s profile by three features: the goal intentions, the effort needed to achieve that goal intentions, and performance in evaluating the manuscript in peer review.For this, we have used the data collected from tha answers to a survey for authors of different journals.
-This code is associated to the paper: "The reviewer's profile in peer-review of a manuscript by goal, effort and performance
+This code is associated to the paper: "What motivates reviewers in Information Science? An empirical study of goal intentions and  monetary incentives
 Rodríguez-Sánchez, R., Montero-Parodi, J.J., García , J.A., Fdez-Valdivia, J."
 
 ### References
