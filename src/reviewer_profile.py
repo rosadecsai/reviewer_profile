@@ -145,7 +145,7 @@ if __name__ == '__main__':
     # print("########################################")
     # print("ONE WAY ANOVA test for Q6 question")
     # print("########################################")
-    getANOVA(df_goal[["Q6.1","Q6.2","Q6.3","Q6.4","Q6.5"]])
+    #getANOVA(df_goal[["Q6.1","Q6.2","Q6.3","Q6.4","Q6.5"]])
     # input()
     
     
@@ -165,12 +165,17 @@ if __name__ == '__main__':
     # print("########################################")
     # print("dependency with more one variable")
     # print("########################################")
-    # df_test=pd.DataFrame()
-    # df_test.at[:,"Q61"]=df_goal["Q6.1"]
-    # df_test.at[:,"Q62"]=df_goal["Q6.2"]
-    # df_test.at[:,"Q63"]=df_goal["Q6.3"]
-    # df_test.at[:,"Q64"]=df_goal["Q6.4"]
-    # df_test.at[:,"Q65"]=df_goal["Q6.5"]
+    df_test=pd.DataFrame()
+    df_test.at[:,"Q61"]=df_goal["Q6.1"]
+    df_test.at[:,"Q62"]=df_goal["Q6.2"]
+    df_test.at[:,"Q63"]=df_goal["Q6.3"]
+    df_test.at[:,"Q64"]=df_goal["Q6.4"]
+    df_test.at[:,"Q65"]=df_goal["Q6.5"]
+    #df_test.at[:,"Q510"]=df_sesgo["Q5.1_0"] # $0
+    #df_test.at[:,"Q511"]=df_sesgo["Q5.1_1"] # $10
+    #df_test.at[:,"Q512"]=df_sesgo["Q5.1_2"] # $50
+    #df_test.at[:,"Q514"]=df_sesgo["Q5.1_4"] # $150
+    df_test.at[:,"Q515"]=df_sesgo["Q5.1_5"] # $200
     # df_test.at[:,"nomoney"]=df_sesgo["nomoney"]
     # df_test.at[:,"Q410"]=df_sesgo["Q4.1_0"]
     # df_test.at[:,"Q411"]=df_sesgo["Q4.1_1"]
@@ -190,6 +195,8 @@ if __name__ == '__main__':
     #Analize if Q6.1 joint to Q6.2 and Q4.1_0 or Q4.1_1 or Q4.1_2
     #getMANOVA(df_test,"money",["Q61","Q412"],True)
     
+    #Analize Q6.1 joint Q6.2 and $ 
+    getMANOVA(df_test,"Q515",["Q61","Q62"],False)
     
 
     
