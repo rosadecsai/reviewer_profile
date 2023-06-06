@@ -5,7 +5,7 @@ Rodríguez-Sánchez, R., Montero-Parodi, J.J., García , J.A., Fdez-Valdivia, J.
 
 ### References
 * Rodríguez-Sánchez, R., Montero-Parodi, J.J., García , J.A., Fdez-Valdivia,J. What motivates reviewers in Information Science? An empirical study of goal intentions and  monetary incentives. Submitted to a JCR journal. 
-* Garcia J.A., Rodriguez-Sánchez R., Fdez-Valdivia J. (2023). How to motivate a reviewer with a present bias to work harder. Submitted to Journal of Information Science. Preprint https://www.researchgate.net/publication/367379661_How_to_motivate_a_reviewer_with_a_present_bias_to_work_harder.
+* Garcia J.A., Rodriguez-Sánchez R., Fdez-Valdivia J. (2023). How to motivate a reviewer with a present bias to work harder. Submitted to Journal of Infometrics. Preprint https://www.researchgate.net/publication/367379661_How_to_motivate_a_reviewer_with_a_present_bias_to_work_harder.
 
 ### Example of execution
 From the command line:
